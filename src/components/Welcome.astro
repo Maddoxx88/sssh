@@ -1,26 +1,13 @@
 ---
-import "../styles/globals.css";
+
+import Header from "./Header.astro";
+import Work from "./Work.astro";
+import Nav from "./Navigation.astro";
+import Projects from "./Projects.astro";
 ---
 
-<div class="max-w-4xl mx-auto px-4 py-8">
-  <nav class="flex items-center justify-between mb-12 text-sm">
-    <div class="flex space-x-4">
-      <a class="hover:text-accent transition-colors duration-200" href="/"
-        >[h] home</a>
-		<a class="hover:text-accent transition-colors duration-200" href="/blog"
-        >[b] blog</a>
-		<a
-        class="hover:text-accent transition-colors duration-200"
-        href="/projects">[p] projects</a>
-		<a
-        class="hover:text-accent transition-colors duration-200"
-        href="/about">[a] about</a>
-		<a
-        class="hover:text-accent transition-colors duration-200"
-        href="/about">[l] links</a>
-    </div>
-  </nav>
-  <header class="mb-16 space-y-4"><h1 class="text-4xl font-bold mb-4 animate-fade-in"><span class="inline-block"><span class="">sunit shirke</span></span></h1><div class="flex flex-col gap-2 text-gray-400"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-4 h-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>newark, nj</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2 w-4 h-4"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>grad researcher @njit</div></div><p class="leading-relaxed animate-fade-in-up">i'm a cs grad student @njit. i love building things and solving problems. i enjoy language design, theoretical computer science and i live on the terminal. if i'm not coding, i'm probably doing cardistry, watching movies or obsessing over mechanical keyboards.</p></header>
 
-  <section class="mb-16 animate-fade-in-up"><h2 class="text-2xl font-bold mb-6 flex items-center"><span class="text-accent mr-1">|</span> <!-- -->work</h2><div class="space-y-8"><div class="group"><a target="_blank" href="https://leapflow.tech"><h3 class="text-xl font-semibold mb-1  group-hover:text-accent transition-colors duration-200">leapflow</h3><p class="text-sm text-gray-400 mb-2">co-founder and cto<!-- --> <!-- -->(may 2024 - present)</p><p class="text-gray-300">leading engineering to build ai agents for automating repetitive tasks in existing software</p></a></div><div class="group"><a target="_blank" href="https://dimension.dev"><h3 class="text-xl font-semibold mb-1  group-hover:text-accent transition-colors duration-200">dimension</h3><p class="text-sm text-gray-400 mb-2">full-stack engineer<!-- --> <!-- -->(nov 2023 - jan 2024)</p><p class="text-gray-300">contributed to a large-scale t3 stack app. worked on real-time presence and chat features</p></a></div></div></section>
-</div>
+  <Nav />
+  <Header />
+  <Work />
+  <Projects />
