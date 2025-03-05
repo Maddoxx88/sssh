@@ -1,5 +1,9 @@
 ---
+import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
+const {title} = Astro.props
+
+
 ---
 
 <!doctype html>
@@ -9,14 +13,19 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Sunit Shirke</title>
+	
+		    <!-- Include the keybind script -->
+			<script type="module" src="/src/js/keybinds.js" defer></script>
+		<title>Sunit Shirke | {title}</title>
 	</head>
 	<body class="min-h-screen">
 		<div class="max-w-4xl mx-auto px-4 py-8">
+			<Navigation />
 			<slot />
 		</div>
 	</body>
 </html>
+
 
 <style>
 	html,

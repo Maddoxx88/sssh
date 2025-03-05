@@ -1,17 +1,21 @@
+---
+
+---
+
 <nav class="flex items-center justify-between mb-12 text-sm">
-    <div class="flex space-x-4">
-      <a class="hover:text-accent transition-colors duration-200" href="/"
-        >[h] home</a>
-		<a class="hover:text-accent transition-colors duration-200" href="/blog"
-        >[b] blog</a>
-		<a
-        class="hover:text-accent transition-colors duration-200"
-        href="/projects">[p] projects</a>
-		<a
-        class="hover:text-accent transition-colors duration-200"
-        href="/about">[a] about</a>
-		<a
-        class="hover:text-accent transition-colors duration-200"
-        href="/about">[l] links</a>
-    </div>
-  </nav>
+  <div class="flex space-x-4">
+    <a
+      class={`hover:text-accent transition-colors duration-200 ${Astro.url.pathname === "/" ? `font-bold underline decoration-2` : ``}`}
+      href="/">[h] home</a
+    >
+    <a class={`hover:text-accent transition-colors duration-200 ${Astro.url.pathname === "/blog" ? `font-bold underline decoration-2` : ``}`} href="/blog"
+      >[b] blog</a
+    >
+    <a class={`hover:text-accent transition-colors duration-200 ${Astro.url.pathname === "/projects" ? `font-bold underline decoration-2` : ``}`} href="/projects"
+      >[p] projects</a
+    >
+    <a class={`hover:text-accent transition-colors duration-200 ${Astro.url.pathname === "/links" ? `font-bold underline decoration-2` : ``}`} href="/about"
+      >[l] links</a
+    >
+  </div>
+</nav>
