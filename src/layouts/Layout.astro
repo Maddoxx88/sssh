@@ -1,38 +1,36 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
-const {title} = Astro.props
-
-
+const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-	
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
 
-		<title>Sunit Shirke | {title}</title>
-	</head>
-	<body class="min-h-screen">
-		<div class="max-w-4xl mx-auto px-4 py-8">
-			<Navigation />
-			<slot />
-		</div>
-				<!-- Include the keybind script -->
-				<script type="module" src="/src/js/keybinds.js" defer></script>
-	</body>
+    <title>Sunit Shirke | {title}</title>
+  </head>
+  <body class="min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+      <Navigation />
+      <slot />
+    </div>
+  </body>
 </html>
 
+<script>
+  import "../js/keybinds.ts";
+</script>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
