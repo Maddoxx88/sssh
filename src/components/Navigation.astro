@@ -5,17 +5,17 @@
 <nav class="flex items-center justify-between mb-12 text-sm">
   <div class="flex space-x-8 font-inter">
     <a
-      class={`text-lg hover:text-accent transition-colors duration-200 text-primary ${Astro.url.pathname === "/" ? `font-bold bg-amber-200` : ``}`}
+      class={`text-lg hover:text-accent transition-colors duration-200 text-primary ${Astro.url.pathname === "/" ? `font-bold bg-amber-300` : ``}`}
       href="/">[h] home</a
     >
-    <a class={`text-lg hover:text-accent transition-colors duration-200 ${Astro.url.pathname === "/blog" ? `font-bold underline decoration-2` : ``}`} href="/blog"
+    <a class={`text-lg hover:text-accent transition-colors duration-200 ${Astro.url.pathname === "/work" ? `font-bold bg-amber-300` : ``}`} href="/work"
+      >[w] work</a
+    >
+    <a class={`text-lg hover:text-accent transition-colors duration-200 ${Astro.url.pathname === "/blog" ? `font-bold bg-amber-300` : ``}`} href="/blog"
       >[b] blog</a
     >
-    <a class={`text-lg hover:text-accent transition-colors duration-200 ${Astro.url.pathname === "/projects" ? `font-bold underline decoration-2` : ``}`} href="/projects"
+    <a class={`text-lg hover:text-accent transition-colors duration-200 ${Astro.url.pathname === "/projects" ? `font-bold bg-amber-300` : ``}`} href="/projects"
       >[p] projects</a
-    >
-    <a class={`text-lg hover:text-accent transition-colors duration-200 ${Astro.url.pathname === "/links" ? `font-bold underline decoration-2` : ``}`} href="/about"
-      >[l] links</a
     >
   </div>
 </nav>

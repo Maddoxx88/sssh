@@ -24,6 +24,8 @@ function handleKeyPress(event: KeyboardEvent) {
         break
       case "l":
         window.location.href = '/links';
+      case "w":
+        window.location.href = '/work';
         break
     }
 

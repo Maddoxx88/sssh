@@ -2,13 +2,15 @@
 import { MapPin, Building2 } from "lucide-react"
 import { Image } from 'astro:assets';
 import sunitHeaderOfficial from '../assets/sunit-official.png';
+import sunitHeaderOfficial2 from '../assets/profile-pic.png';
 ---
 
 <header class="mb-16 space-y-4">
   <!-- Profile Avatar -->
    
   <div class="flex">
-    <Image src={sunitHeaderOfficial} alt="Sunit Shirke" class="w-36 h-36 rounded-full border-4 p-1 border-purple-800 shadow-lg" />
+    <!-- <Image src={sunitHeaderOfficial2} alt="Sunit Shirke" class="w-36 h-36 rounded-full p-1 shadow-lg bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045]" /> -->
+    <Image src={sunitHeaderOfficial} alt="Sunit Shirke" class="w-36 h-36 rounded-full shadow-lg" />
   </div>
 
   <h1 class="text-6xl font-bold mb-8 animate-fade-in">
@@ -16,8 +18,8 @@ import sunitHeaderOfficial from '../assets/sunit-official.png';
       <span class="font-inter font-bold text-secondary">sunit shirke</span>
     </span>
   </h1>
-
-  <div class="flex flex-col my-4 gap-2 text-gray-400">
+  
+  <div class="flex flex-col my-4 gap-2 text-gray-400 font-mono">
     <div class="flex items-center gap-2">
       <MapPin className="w-4 h-4" />
       newark, nj
