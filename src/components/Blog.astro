@@ -1,6 +1,104 @@
-<main class="animate-fade-in-up relative"><h1 class="text-2xl font-bold mb-8"><span class="mr-2">|</span><span class="">blog</span></h1><p class="hidden sm:block text-sm text-gray-400 mb-8">press <kbd class="px-1 py-0.5 text-xs border border-gray-700 rounded">/</kbd> to search • use <kbd class="px-1 py-0.5 text-xs border border-gray-700 rounded">ctrl / ⌘ j</kbd> and <kbd class="px-1 py-0.5 text-xs border border-gray-700 rounded">ctrl / ⌘ k</kbd> or <kbd class="px-1 py-0.5 text-xs border border-gray-700 rounded">↑</kbd> and <kbd class="px-1 py-0.5 text-xs border border-gray-700 rounded">↓</kbd> to navigate</p>
-    
-    <div class="space-y-8 sm:space-y-4"><div>
-        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/dfa">implementing string pattern matching using dfas</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>jul 5, 2024</span></div></div></div><div><div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/ricing-macos">ricing macos</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>nov 1, 2023</span></div></div></div><div><div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/organising-life">how i organise my life</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>aug 3, 2023</span></div></div></div><div><div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/neovim-to-vscode">why i switched from neovim to vscode</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>jun 23, 2023</span></div></div></div><div><div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/new-mac">everything i installed on my new mac</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>jun 2, 2023</span></div></div></div><div><div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/rust">rust: not just zoom zoom fast</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>feb 25, 2023</span></div></div></div><div><div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/pipe">implementing the pipe operator in typescript</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>jan 21, 2023</span></div></div></div><div><div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/pattern-matching">expressive code with pattern matching</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>dec 29, 2022</span></div></div></div><div><div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/typesafe-database">typesafe database queries on the edge</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>nov 12, 2022</span></div></div></div><div><div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/wsl-workflow">my developer workflow using wsl, tmux and neovim</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>aug 16, 2022</span></div></div></div><div><div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/ct3a">t3 stack and my most popular open source project ever</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>jun 27, 2022</span></div></div></div><div><div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/gen-license">create licenses for your projects right from the terminal</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>mar 25, 2022</span></div></div></div><div><div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group "><a class="text-gray-500 hover:text-black transition-colors duration-200" href="/blog/nexdle">i made a wordle clone</a><div class="flex items-center text-sm text-gray-400 shrink-0"><span>mar 21, 2022</span></div></div></div></div></main>
+---
+  const posts = [
+    {
+      name: "My most meaningful initiative ever — Smart India Hackathon",
+      link: "https://medium.com/p/22734c17ddfa",
+      date: "7/12/2018",
+    },
+    {
+      name: "Interact with MySQL DB using Android’s WebView & PHP (Part 1: Setup & Preview)",
+      link: "https://medium.com/p/1327d3baf277",
+      date: "8/3/2020",
+    },
+    {
+      name: "Interact with MySQL DB using Android’s WebView & PHP (Part 2: Completion)",
+      link: "https://medium.com/p/c03b6fd63db4",
+      date: "15/3/2020",
+    },
+    {
+      name: "Convert Adobe XD prototypes to Flutter Widgets [EARLY ACCESS]",
+      link: "https://medium.com/p/67cecd40c509",
+      date: "19/5/2020",
+    },
+    {
+      name: "Customize Android Studio UI",
+      link: "https://medium.com/p/dfe517d28f44",
+      date: "18/6/2020",
+    },
+    {
+      name: "Welcome to CodeAppRun",
+      link: "https://medium.com/p/ab609bebda00",
+      date: "6/8/2020",
+    },
+    {
+      name: "How to get a Dribbble Invite?",
+      link: "https://medium.com/p/bcf8767b3baa",
+      date: "8/9/2020",
+    },
+    {
+      name: "A desperate mistake: Update README.md",
+      link: "https://medium.com/p/1a912a9fd0a8",
+      date: "3/10/2020",
+    },
+    {
+      name: "Here’s why design tools don’t matter!",
+      link: "https://medium.com/p/df7c20f55e96",
+      date: "12/10/2020",
+    },
+    {
+      name: "How Media Query Is Going To Change Your Flutter App",
+      link: "https://dev.to/sunitshirke/how-media-query-is-going-to-change-your-flutter-app-4ni0",
+      date: "30/9/2020",
+    },
+    {
+      name: "Introducing microregex - A highly Curated Catalog of RegEx Patterns",
+      link: "https://reactplay.hashnode.dev/introducing-microregex-a-highly-curated-catalog-of-regex-patterns",
+      date: "24/10/2022",
+    },
+  ];
 
-        <div class="fixed bottom-4 left-4 right-4 max-w-2xl mx-auto bg-black/50 backdrop-blur-sm border border-gray-800 p-2"><div class="flex items-center text-gray-400"><span class="text-accent mr-2">/</span><input class="flex-1 bg-transparent outline-none" placeholder="search posts..." aria-label="Search posts" role="searchbox" aria-expanded="true" aria-controls="search-results" aria-activedescendant="post-dfa" type="text" value=""></div></div>
+  const sortedPosts = posts
+  .map(post => ({
+    ...post,
+    dateObj: new Date(post.date.split('/').reverse().join('-')) // Convert to Date object
+  }))
+  .sort((a: {date: string, name: string, link: string, dateObj: Date}, b: {date: string, name: string, link: string, dateObj: Date}) => b.dateObj - a.dateObj) // Sort descending
+  .map(post => ({
+    name: post.name,
+    link: post.link,
+    date: post.dateObj.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' }) // Format to English
+  }));
+
+---
+
+<main class="animate-fade-in-up relative">
+  <h1 class="text-2xl font-bold mb-8 font-inter">
+    <span class="mr-2">|</span><span class="">blog</span>
+  </h1>
+  <p class="hidden sm:block text-sm text-gray-400 mb-8 font-mono">
+    press <kbd class="px-1 py-0.5 text-xs border border-gray-700 rounded">/</kbd
+    > to search • use <kbd
+      class="px-1 py-0.5 text-xs border border-gray-700 rounded">ctrl / ⌘ j</kbd
+    > and <kbd class="px-1 py-0.5 text-xs border border-gray-700 rounded"
+      >ctrl / ⌘ k</kbd
+    > or <kbd class="px-1 py-0.5 text-xs border border-gray-700 rounded">↑</kbd>
+    and <kbd class="px-1 py-0.5 text-xs border border-gray-700 rounded">↓</kbd> to
+    navigate
+  </p>
+
+  <div class="space-y-8 sm:space-y-4">
+{sortedPosts.map((post) => {
+return (          <div
+        class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 group font-inter"
+      >
+        <a
+          class="text-gray-500 hover:text-black transition-colors duration-200"
+          href={post.link} target="_blank">{post.name}</a
+        ><div class="flex items-center text-sm text-gray-400 shrink-0">
+          <span>{post.date}</span>
+        </div>
+      </div>)
+})}
+  </div>
+</main>
+
