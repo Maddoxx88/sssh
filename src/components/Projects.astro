@@ -1,131 +1,189 @@
-<section class="mb-16 animate-fade-in-up">
-  <h2 class="text-2xl font-bold mb-6 flex items-center">
-    <span class="text-accent mr-2">|</span>
-    <!-- -->projects
-  </h2><div class="space-y-8">
-    <div class="group">
-      <a target="_blank" href="https://microregex.netlify.app/"
-        ><h3
-          class="text-xl font-semibold mb-1 group-hover:text-accent transition-colors duration-200"
-        >
-          microregex
-        </h3><p class="text-sm text-gray-400 mb-2">
-          co-creator and maintainer<!-- -->
-        </p><p class="text-gray-300">
-          open source containing highly curated catalog of regular expression
-          patterns
-        </p></a>
+---
+import { ArrowUpRight } from "lucide-react"
+
+enum ProgrammingTags {
+    TypeScript = "typescript",
+    JavaScript = "javascript",
+    SvelteKit = "sveltekit",
+    React = "react",
+    NextJS = "nextjs",
+    NodeJS = "nodejs",
+    Express = "express",
+    MongoDB = "mongodb",
+    PostgreSQL = "postgresql",
+    GraphQL = "graphql",
+    Apollo = "apollo",
+    TailwindCSS = "tailwindcss",
+    Vercel = "vercel",
+    Netlify = "netlify",
+    Heroku = "heroku",
+    Docker = "docker",
+    Kubernetes = "kubernetes",
+    AWS = "aws",
+    GCP = "gcp",
+    Azure = "azure",
+    GitHub = "github",
+    GitLab = "gitlab",
+    Bitbucket = "bitbucket",
+    Jira = "jira",
+    Confluence = "confluence",
+    Trello = "trello",
+    Slack = "slack",
+    Discord = "discord",
+    Zoom = "zoom",
+    WebRTC = "webrtc",
+    WebSockets = "websockets",
+    REST = "rest",
+    OAuth = "oauth",
+    JWT = "jwt",
+    Cookies = "cookies",
+    Sessions = "sessions",
+    LocalStorage = "localstorage",
+    IndexedDB = "indexeddb",
+    PWA = "pwa",
+    AMP = "amp",
+    SEO = "seo",
+    Accessibility = "accessibility",
+    Performance = "performance",
+    Security = "security",
+    Testing = "testing",
+    CI = "ci",
+    CD = "cd",
+    DevOps = "devops",
+    Agile = "agile",
+    Scrum = "scrum",
+    Kanban = "kanban",
+    Waterfall = "waterfall",
+    PairProgramming = "pairprogramming",
+    CodeReview = "codereview",
+    TDD = "tdd",
+    BDD = "bdd",
+    DDD = "ddd",
+    Microservices = "microservices",
+    Monolith = "monolith",
+    Serverless = "serverless",
+    RESTful = "restful",
+    GraphQLAPI = "graphqlapi",
+    Webhooks = "webhooks",
+    WebSocketsAPI = "websocketsapi",
+    Realtime = "realtime",
+    Offline = "offline",
+    Responsive = "responsive",
+    MobileFirst = "mobilefirst",
+    DarkMode = "darkmode",
+    ChakraUI = "chakra-ui",
+}
+
+const projects = [
+    {
+        name: "microregex",
+        url: "https://microregex.netlify.app/",
+        role: "co-creator and maintainer",
+        description: "open source containing highly curated catalog of regular expression patterns",
+        tags: [ProgrammingTags.React, ProgrammingTags.PostgreSQL, ProgrammingTags.ChakraUI, ProgrammingTags.PostgreSQL, ProgrammingTags.GraphQL],
+    },
+    {
+        name: "digital wallet payment system",
+        url: "https://github.com/Maddoxx88/wallet-payment-network",
+        role: "creator",
+        description: "features include managing accounts, sending and requesting money, and analyzing transaction data. project created as final deliverable for CS631 (db and sys design)",
+        tags: [ProgrammingTags.React, ProgrammingTags.PostgreSQL, ProgrammingTags.ChakraUI, ProgrammingTags.PostgreSQL, ProgrammingTags.GraphQL],
+    },
+    {
+        name: "laptop component knowledge base & QA system",
+        url: "https://github.com/Maddoxx88/laptopkb-and-query",
+        role: "creator",
+        description: "an interactive app that classifies laptop components from images. developed a dynamic QA system leveraging a knowledge base",
+        tags: [ProgrammingTags.React, ProgrammingTags.PostgreSQL, ProgrammingTags.ChakraUI, ProgrammingTags.PostgreSQL, ProgrammingTags.GraphQL],
+    },
+    {
+        name: "infinity camera for noise reduction",
+        url: "https://github.com/Maddoxx88/vkpro",
+        role: "co-creator",
+        description: "smart camera mobile app for android which minimizes noise reduction in the post processing of a photo using renderscript api (gpu)",
+        tags: [ProgrammingTags.React, ProgrammingTags.PostgreSQL, ProgrammingTags.ChakraUI, ProgrammingTags.PostgreSQL, ProgrammingTags.GraphQL],
+    },
+    {
+        name: "excalidraw libraries",
+        url: "https://github.com/Maddoxx88/excalidraw-libraries",
+        role: "contributor",
+        description: "contributed various libraries to the repo",
+        tags: [ProgrammingTags.React, ProgrammingTags.PostgreSQL, ProgrammingTags.ChakraUI, ProgrammingTags.PostgreSQL, ProgrammingTags.GraphQL],
+    },
+    {
+        name: "cpu scheduing algos",
+        url: "https://github.com/Maddoxx88/cpu-scheduling-algos",
+        role: "creator",
+        description: "various cpu scheduing algos visualized. used sveltekit.",
+        tags: [ProgrammingTags.SvelteKit],
+    },
+    {
+        name: "ifsc validator",
+        url: "https://github.com/Maddoxx88/ifsc-validator",
+        role: "creator",
+        description: "mobile app to validate ifsc codes using razorpay api",
+        tags: [ProgrammingTags.SvelteKit],
+    },
+    {
+        name: "wishing well",
+        url: "https://wishingwell-ai.vercel.app/",
+        role: "co-creator and developer",
+        description: "ai gift generator",
+        tags: [ProgrammingTags.NextJS, ProgrammingTags.TailwindCSS, ProgrammingTags.Vercel]
+    },
+]
+
+
+---
+
+<main class="animate-fade-in-up">
+    <h1 class="text-2xl font-bold mb-8 font-inter">
+        <span class="mr-2">|</span><span class="">projects</span>
+      </h1>
+  <p class="text-gray-400 mb-12 leading-relaxed">
+    here are some of the projects i've worked on. i love building tools that
+    make developers' lives easier and exploring new technologies along the way.
+  </p>
+  <div class="space-y-12">
+    
+    {projects.map((project) => {
+        return (
+        <div
+      class="group border border-gray-400 rounded p-6 transition-colors hover:border-black"
+    >
+      <a target="_blank" href={project.url}
+        ><div class="flex justify-between items-start mb-4">
+          <h2
+            class="text-2xl font-bold  group-hover:text-black transition-colors"
+          >
+          {project.name}
+          </h2><ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-accent transition-colors" />
+        </div></a
+      ><p class="text-sm text-gray-300 mb-4">{project.role}</p><p
+        class="text-gray-400 mb-6"
+      >
+        {project.description}
+      </p>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-semibold mb-2">technologies</h3><div
+            class="flex flex-wrap gap-2"
+          >
+            {project.tags.map((tag) => {
+                return (
+                <span
+              class="px-2 py-1 bg-gray-300 text-gray-800 rounded text-xs"
+            >
+              {tag}
+            </span>
+                )
+            })}
+          </div>
+        </div>
+      </div>
     </div>
+        )
+    })}
 
-    <div class="group">
-        <a target="_blank" href="https://github.com/Maddoxx88/wallet-payment-network"
-          ><h3
-            class="text-xl font-semibold mb-1 group-hover:text-accent transition-colors duration-200"
-          >
-            digital wallet payment system
-          </h3><p class="text-sm text-gray-400 mb-2">creator<!-- --></p><p
-            class="text-gray-300"
-          >
-          features include managing accounts, sending and requesting money, and analyzing transaction data. project created as final deliverable for CS631 (db and sys design)
-          </p></a>
-      </div>
-
-      <div class="group">
-        <a target="_blank" href="https://github.com/Maddoxx88/vkpro"
-          ><h3
-            class="text-xl font-semibold mb-1 group-hover:text-accent transition-colors duration-200"
-          >
-            laptop component knowledge base & QA system
-          </h3><p class="text-sm text-gray-400 mb-2">creator<!-- --></p><p
-            class="text-gray-300"
-          >
-          an interactive app that classifies laptop components from images. developed a dynamic QA system leveraging a knowledge base.
-          </p></a>
-      </div>
-
-      <div class="group">
-        <a target="_blank" href="https://github.com/Maddoxx88/vkpro"
-          ><h3
-            class="text-xl font-semibold mb-1 group-hover:text-accent transition-colors duration-200"
-          >
-            infinity camera for noise reduction
-          </h3><p class="text-sm text-gray-400 mb-2">co-creator<!-- --></p><p
-            class="text-gray-300"
-          >
-          smart camera mobile app for android which minimizes noise reduction in the post processing of a photo using renderscript api (gpu)
-          </p></a>
-      </div>
-
-    <div class="group">
-        <a target="_blank" href="https://github.com/Maddoxx88/excalidraw-libraries"
-          ><h3
-            class="text-xl font-semibold mb-1 group-hover:text-accent transition-colors duration-200"
-          >
-            excalidraw libraries
-          </h3><p class="text-sm text-gray-400 mb-2">contributor<!-- --></p><p
-            class="text-gray-300"
-          >
-            contributed various libraries to the repo
-          </p></a>
-      </div>
-
-
-      <div class="group">
-        <a target="_blank" href="https://github.com/Maddoxx88/cpu-scheduling-algos"
-          ><h3
-            class="text-xl font-semibold mb-1 group-hover:text-accent transition-colors duration-200"
-          >
-            cpu scheduing algos
-          </h3><p class="text-sm text-gray-400 mb-2">creator<!-- --></p><p
-            class="text-gray-300"
-          >
-            various cpu scheduing algos visualized. used sveltekit. 
-          </p></a>
-      </div>
-    <div class="group">
-        <a target="_blank" href="https://github.com/Maddoxx88/ifsc-validator"
-          ><h3
-            class="text-xl font-semibold mb-1 group-hover:text-accent transition-colors duration-200"
-          >
-            ifsc validator
-          </h3><p class="text-sm text-gray-400 mb-2">creator<!-- --></p><p
-            class="text-gray-300"
-          >
-            mobile app to validate ifsc codes using razorpay api
-          </p></a>
-      </div>
-
-      <div class="group">
-        <a target="_blank" href="https://wishingwell-ai.vercel.app/"
-          ><h3
-            class="text-xl font-semibold mb-1 group-hover:text-accent transition-colors duration-200"
-          >
-            wishing well
-          </h3><p class="text-sm text-gray-400 mb-1">co-creator<!-- --></p><p
-            class="text-gray-300"
-          >
-            ai gift generator
-          </p></a>
-      </div>
   </div>
-
-  <a
-    class="inline-flex items-center gap-1 mt-6 text-accent hover:underline group"
-    href="/projects"
-    >all projects<!-- -->
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="lucide lucide-arrow-up-right w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
-      ><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg
-    ></a
-  >
-</section>
-
+</main>
