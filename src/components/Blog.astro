@@ -62,7 +62,7 @@
     ...post,
     dateObj: new Date(post.date.split('/').reverse().join('-')) // Convert to Date object
   }))
-  .sort((a, b) => b.dateObj - a.dateObj) // Sort descending
+  .sort((a: {date: string, name: string, link: string, dateObj: Date}, b: {date: string, name: string, link: string, dateObj: Date}) => b.dateObj - a.dateObj) // Sort descending
   .map(post => ({
     name: post.name,
     link: post.link,
@@ -74,7 +74,8 @@
 <main class="animate-fade-in-up relative">
   <h1 class="text-2xl font-bold mb-8 font-inter">
     <span class="mr-2">|</span><span class="">blog</span>
-  </h1><p class="hidden sm:block text-sm text-gray-400 mb-8 font-mono">
+  </h1>
+  <p class="hidden sm:block text-sm text-gray-400 mb-8 font-mono">
     press <kbd class="px-1 py-0.5 text-xs border border-gray-700 rounded">/</kbd
     > to search • use <kbd
       class="px-1 py-0.5 text-xs border border-gray-700 rounded">ctrl / ⌘ j</kbd
