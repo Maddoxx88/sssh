@@ -22,10 +22,11 @@ function handleKeyPress(event: KeyboardEvent) {
       case "p":
         window.location.href = '/projects';
         break
-      case "l":
-        window.location.href = '/links';
       case "w":
         window.location.href = '/work';
+        break
+      case "f":
+        window.location.href = '/fun';
         break
     }
 
