@@ -149,15 +149,15 @@ const projects = [
     {projects.map((project) => {
         return (
         <div
-      class="group border border-gray-400 rounded p-6 transition-colors hover:border-black"
+      class="group border border-gray-300 p-6 transition-colors hover:border-gray-500 hover:shadow-lg"
     >
       <a target="_blank" href={project.url}
         ><div class="flex justify-between items-start mb-4">
           <h2
-            class="text-2xl font-bold  group-hover:text-black transition-colors"
+            class="text-2xl font-bold "
           >
           {project.name}
-          </h2><ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-accent transition-colors" />
+          </h2><ArrowUpRight className="w-5 h-5 text-gray-400 " />
         </div></a
       ><p class="text-sm text-gray-300 mb-4">{project.role}</p><p
         class="text-gray-400 mb-6"
