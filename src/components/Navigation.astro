@@ -3,6 +3,7 @@
 ---
 
 <nav class="flex items-center justify-between mb-12 text-sm">
+  <h1>{Astro.url.pathname}</h1>
   <div class="flex space-x-8 font-inter">
     <a
       class={`text-lg hover:text-accent transition-colors duration-200 text-primary ${Astro.url.pathname === "/" ? `font-bold bg-amber-300` : ``}`}
