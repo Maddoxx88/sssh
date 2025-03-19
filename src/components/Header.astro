@@ -3,6 +3,7 @@ import { MapPin, Building2 } from "lucide-react"
 import { Image } from 'astro:assets';
 import sunitHeaderOfficial from '../assets/sunit-official.png';
 import sunitHeaderOfficial2 from '../assets/profile-pic.png';
+import { ArrowUpRight } from "lucide-react"
 ---
 
 <header class="mb-16 space-y-4">
@@ -31,10 +32,10 @@ import sunitHeaderOfficial2 from '../assets/profile-pic.png';
   </div>
 
   <h1 class="text-4xl font-bold my-8 animate-fade-in">
-    <span class="inline-block">
+    <span class="inline-block group">
       <span class="font-inter font-bold text-secondary">
         I make <span class="inline-flex relative text-green-600 before:absolute before:inset-0 before:bg-green-200 dark:before:bg-green-500 before:opacity-10 before:-z-10 before:-rotate-1 before:translate-y-1/4">full-stack</span> products that
-        <div class="relative group">
+        <div class="relative">
           <span class="transition duration-300">people <span class="text-pink-400">love.</span></span>
           <span class="opacity-0 group-hover:opacity-100 absolute bottom-0 z-10 transition duration-300"> (mostly me)</span>
         </div>
@@ -42,12 +43,33 @@ import sunitHeaderOfficial2 from '../assets/profile-pic.png';
     </span>
   </h1>
 
-  <p class="leading-relaxed animate-fade-in-up text-lg font-inter">
+  <p class="leading-relaxed animate-fade-in-up text-md font-inter">
     Most fun developer ever (seriously). I enjoy ux design, operating systems and contributing to OSS. CS Grad Student @NJIT. I’m also a Project Supervisor @GDG.
   </p>
-  <p class="leading-relaxed animate-fade-in-up text-lg font-inter">
+  <p class="leading-relaxed animate-fade-in-up text-md font-inter">
     Blogging used to be a big part of my life, but has lately taken a back seat as a past time hobby. Interested in learning more about my
     <a class="inline-flex items-center gap-1 mt-0 text-accent underline group" href="https://medium.com/design-bootcamp/heres-why-design-tools-don-t-matter-df7c20f55e96" target="_blank">published work</a>?
   </p>
+
+  <p class="leading-relaxed animate-fade-in-up text-md font-inter">
+    Reach out to me 
+      <a class="inline-flex items-center gap-1 mt-0 text-md text-blue-500 underline group" href="mailto:ss4945@njit.edu">ss4945@njit.edu <ArrowUpRight className="w-5 h-5 text-blue-500 transition-colors" /></a>
+    </p>
+  
+  <div class="flex items-center gap-4 mt-8 animate-fade-in-up font-inter font-bold">
+
+    <div class="group text-black text-lg">
+      <a class="inline-flex items-center gap-1 mt-0 group-hover:text-blue-500" href="mailto:ss4945@njit.edu">GitHub <ArrowUpRight className="w-5 h-5  transition-colors" /></a>
+    </div>
+    <div class="group text-black text-lg">
+      <a class="inline-flex items-center gap-1 mt-0 group-hover:text-blue-500" href="mailto:ss4945@njit.edu">Linkedin <ArrowUpRight className="w-5 h-5  transition-colors" /></a>
+    </div>
+    <div class="group text-black text-lg">
+      <a class="inline-flex items-center gap-1 mt-0 group-hover:text-blue-500" href="mailto:ss4945@njit.edu">Twitter <ArrowUpRight className="w-5 h-5  transition-colors" /></a>
+    </div>
+    <div class="group text-black text-lg">
+      <a class="inline-flex items-center gap-1 mt-0 group-hover:text-blue-500" href="mailto:ss4945@njit.edu">Email <ArrowUpRight className="w-5 h-5  transition-colors" /></a>
+    </div>
+  </div>
 </header>
 
