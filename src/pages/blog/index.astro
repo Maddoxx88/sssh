@@ -1,8 +1,9 @@
 ---
 import Blog from "../../components/Blog.astro";
+import Blogger from "../../components/Blogger";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Blog">
-	<Blog />
+	<Blogger client:load />
 </Layout>
