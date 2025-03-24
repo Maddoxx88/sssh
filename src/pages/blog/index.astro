@@ -1,9 +1,10 @@
 ---
 import Blog from "../../components/Blog.astro";
 import Blogger from "../../components/Blogger";
+import { Posts } from "../../components/react/posts";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Blog">
-	<Blogger client:load />
+	<Posts client:load />
 </Layout>
