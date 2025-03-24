@@ -18,6 +18,6 @@
 
 @theme {
   --font-inter: "Inter", "serif";
-  --font-mono: "Space Mono", "monospace";
+  --font-mono: "Space Mono", monospace;
   --color-primary: var(--color-primary)
 }
