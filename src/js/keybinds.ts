@@ -25,9 +25,9 @@ function handleKeyPress(event: KeyboardEvent) {
       case "w":
         window.location.href = '/work';
         break
-      case "f":
-        window.location.href = '/fun';
-        break
+      // case "f":
+      //   window.location.href = '/fun';
+      //   break
     }
 
  
