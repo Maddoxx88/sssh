@@ -148,7 +148,7 @@ export function Posts() {
         <span className="mr-2">|</span>
         <span className="">blog</span>
       </h1>
-      <p className="text-sm text-gray-400 mb-8 font-mono">
+      <p className="hidden sm:block text-sm text-gray-400 mb-8 font-mono">
         press{" "}
         <kbd className="px-1 py-0.5 text-xs border border-gray-700 rounded">
           /
@@ -170,6 +170,11 @@ export function Posts() {
           ↓
         </kbd>{" "}
         to navigate
+        • press{" "}
+        <kbd className="px-1 py-0.5 text-xs border border-gray-700 rounded">
+          esc
+        </kbd>{" "}
+        to escape
       </p>
       {isSearching && (
         <div className="fixed bottom-4 left-4 right-4 max-w-2xl mx-auto backdrop-blur-sm border border-gray-800 p-2">
