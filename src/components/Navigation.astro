@@ -1,5 +1,7 @@
 ---
 import { Menu, X } from "lucide-react";
+import { Image } from 'astro:assets';
+import sunitHeaderOfficial from '../assets/sunit-official.png';
 ---
 
 <nav class="relative flex items-center justify-between mb-12 text-sm">
@@ -26,16 +28,25 @@ import { Menu, X } from "lucide-react";
       href="/"><span class="relative text-white dark:text-gray-950">[f] fun <span class="text-xs bg-gray-500/50 p-1 text-gray-100 font-bold font-inter">Coming Soon</span></span></a>
   </div>
 
-  <!-- Hamburger Menu Icon -->
-  <button id="hamburger-menu" class="lg:hidden p-2">
-    <Menu id="hamburger" />
-    <X id="close-icon" className="hidden" />
-  </button>
+    <!-- Hamburger Menu Icon -->
+    <button id="hamburger-menu" class="lg:hidden p-2">
+      <Menu id="hamburger" className="w-12 h-12"/>
+      <X id="close-icon" className="hidden w-12 h-12" />
+    </button>
+  
+    <!-- Hamburger Menu Icon -->
+    <button id="hamburger-menu" class="lg:hidden p-2">
+      <div class="flex">
+        <!-- <Image src={sunitHeaderOfficial2} alt="Sunit Shirke" class="w-36 h-36 rounded-full p-1 shadow-lg bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045]" /> -->
+        <Image src={sunitHeaderOfficial} alt="Sunit Shirke" class="w-14 h-14 rounded-full shadow-lg" />
+      </div>
+    </button>
+
 
   <!-- Mobile Menu Links (hidden by default) -->
   <div
     id="mobileMenu"
-    class="lg:hidden hidden absolute top-full left-0 w-full bg-white shadow-lg z-10"
+    class="lg:hidden hidden absolute top-full left-0 w-full bg-white shadow-lg z-10 font-mono"
   >
     <a
       class={`block text-lg hover:text-accent transition-colors duration-200 p-2 ${Astro.url.pathname === "/" ? `font-bold bg-amber-300` : ``}`}
