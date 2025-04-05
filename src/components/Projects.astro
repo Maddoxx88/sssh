@@ -1,59 +1,53 @@
 ---
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight } from "lucide-react";
 
-import { projects } from "../data/projects"
-
+import { projects } from "../data/projects";
 ---
 
 <main class="animate-fade-in-up">
-    <h1 class="text-2xl font-bold mb-8 font-inter">
-        <span class="mr-2">|</span><span class="">projects</span>
-      </h1>
+  <h1 class="text-2xl font-bold mb-8 font-inter">
+    <span class="mr-2">|</span><span class="">projects</span>
+  </h1>
   <p class="text-gray-400 mb-12 leading-relaxed">
-    Here are some of the projects i've worked on. I love building tools and exploring new technologies along the way.
+    Here are some of the projects i've worked on. I love building tools and
+    exploring new technologies along the way.
   </p>
-  <div class="space-y-12 font-inter">
-    
-    {projects.map((project) => {
-        return (
-        <div
-      class="group border-1 border-gray-200 shadow p-6 hover:border-1 transition-colors hover:shadow-xl"
-    >
-      <a target="_blank" href={project.url}
-        >
-          <div class="flex justify-between items-start mb-4">
-          <h2
-            class="text-2xl font-bold "
-          >
-          {project.name}
-          </h2>
-          <ArrowUpRight className="w-6 h-6 text-gray-400 " />
-        </div></a
-      ><p class="text-sm text-gray-300 mb-4">{project.role}</p><p
-        class="text-gray-400 mb-6"
-      >
-        {project.description}
-      </p>
-      <div class="space-y-6">
-        <div>
-          <h3 class="font-semibold mb-2">technologies</h3><div
-            class="flex flex-wrap gap-2"
-          >
-            {project.tags.map((tag) => {
-                return (
-                <span
-              class="px-2 py-1 bg-gray-300 text-gray-800 rounded text-xs"
-            >
-              {tag}
-            </span>
-                )
-            })}
-          </div>
-        </div>
-      </div>
-    </div>
-        )
-    })}
 
+
+  <div class="space-y-12 font-inter">
+    {
+      projects.map((project) => {
+        return (
+          <div class="group border-1 border-gray-200 shadow p-6 hover:border-1 transition-colors hover:shadow-xl">
+            <>
+              <a target="_blank" href={project.url}>
+                <div class="flex justify-between items-start mb-4">
+                  <h2 class="text-2xl font-bold ">{project.name}</h2>
+                  <ArrowUpRight className="w-6 h-6 text-gray-400 " />
+                </div>
+              </a>
+              <p class="text-sm text-gray-300 mb-4">{project.role}</p>
+              <p class="text-gray-400 mb-6">{project.description}</p>
+            </>
+            <div class="space-y-6">
+              <div>
+                <>
+                  <h3 class="font-semibold mb-2">technologies</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => {
+                      return (
+                        <span class="px-2 py-1 bg-gray-300 text-gray-800 rounded text-xs">
+                          {tag}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </>
+              </div>
+            </div>
+          </div>
+        );
+      })
+    }
   </div>
 </main>

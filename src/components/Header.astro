@@ -6,30 +6,32 @@ import sunitHeaderOfficial2 from '../assets/profile-pic.png';
 import { ArrowUpRight } from "lucide-react"
 ---
 
-<header class="mb-16 space-y-4">
+<div class="mb-16 space-y-4">
   <!-- Profile Avatar -->
    
-  <div class="hidden lg:flex">
+  <div class="hidden lg:flex space-x-12 align-middle items-center">
     <!-- <Image src={sunitHeaderOfficial2} alt="Sunit Shirke" class="w-36 h-36 rounded-full p-1 shadow-lg bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045]" /> -->
-    <Image src={sunitHeaderOfficial} alt="Sunit Shirke" class="w-36 h-36 rounded-full shadow-lg" />
+    <Image src={sunitHeaderOfficial} alt="Sunit Shirke" class="w-38 h-38 rounded-full shadow-lg" />
+    <div>
+      <h1 class="lg:text-6xl text-4xl font-bold mb-8 animate-fade-in ">
+        <span class="inline-block bg-black text-transparent bg-clip-text tracking-tight bg-[radial-gradient(100%_100%_at_top_left,gray,gray,rgb(74,32,138,0.75))]">
+          <span class="font-inter font-bold text-secondary ">sunit shirke</span>
+        </span>
+      </h1>
+      
+      <div class="flex flex-col my-4 gap-2 text-gray-400 font-inter">
+        <div class="flex items-center gap-2">
+          <MapPin className="w-4 h-4" />
+          newark, nj
+        </div>
+        <div class="flex items-center gap-2">
+          <Building2 className="w-4 h-4" />
+          grad researcher @NJIT
+        </div>
+      </div>
+    </div>
   </div>
 
-  <h1 class="lg:text-6xl text-4xl font-bold mb-8 animate-fade-in ">
-    <span class="inline-block bg-black text-transparent bg-clip-text tracking-tight bg-[radial-gradient(100%_100%_at_top_left,gray,gray,rgb(74,32,138,0.75))]">
-      <span class="font-inter font-bold text-secondary ">sunit shirke</span>
-    </span>
-  </h1>
-  
-  <div class="flex flex-col my-4 gap-2 text-gray-400 font-mono">
-    <div class="flex items-center gap-2">
-      <MapPin className="w-4 h-4" />
-      newark, nj
-    </div>
-    <div class="flex items-center gap-2">
-      <Building2 className="w-4 h-4" />
-      grad researcher @njit
-    </div>
-  </div>
 
   <h1 class="lg:text-4xl text-2xl font-bold my-8 animate-fade-in">
     <span class="inline-block group">
@@ -71,5 +73,5 @@ import { ArrowUpRight } from "lucide-react"
       <a class="inline-flex items-center gap-1 mt-0 group-hover:text-blue-500" href="mailto:ss4945@njit.edu">Email <ArrowUpRight className="w-5 h-5  transition-colors" /></a>
     </div>
   </div>
-</header>
+</div>
 
