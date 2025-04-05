@@ -19,10 +19,8 @@ export const projects = [
         role: "creator",
         description: "features include managing accounts, sending and requesting money, and analyzing transaction data. project created as final deliverable for CS631 (db and sys design)",
         tags: [
-            ProgrammingTags.React,
-            ProgrammingTags.PostgreSQL,
-            ProgrammingTags.ChakraUI,
-            ProgrammingTags.GraphQL
+            ProgrammingTags.Python,
+            ProgrammingTags.SQLite
         ],
     },
     {
@@ -31,10 +29,10 @@ export const projects = [
         role: "creator",
         description: "an interactive app that classifies laptop components from images. developed a dynamic QA system leveraging a knowledge base",
         tags: [
-            ProgrammingTags.React,
-            ProgrammingTags.PostgreSQL,
-            ProgrammingTags.ChakraUI,
-            ProgrammingTags.GraphQL
+            ProgrammingTags.Python,
+            ProgrammingTags.Streamlit,
+            ProgrammingTags.Flask,
+            ProgrammingTags.ML
         ],
     },
     {
@@ -43,10 +41,9 @@ export const projects = [
         role: "co-creator",
         description: "smart camera mobile app for android which minimizes noise reduction in the post processing of a photo using renderscript api (gpu)",
         tags: [
-            ProgrammingTags.React,
-            ProgrammingTags.PostgreSQL,
-            ProgrammingTags.ChakraUI,
-            ProgrammingTags.GraphQL
+            ProgrammingTags.Kotlin,
+            ProgrammingTags.Renderscript,
+            ProgrammingTags.Android
         ],
     },
     {
@@ -56,9 +53,9 @@ export const projects = [
         description: "contributed various libraries to the repo",
         tags: [
             ProgrammingTags.React,
-            ProgrammingTags.PostgreSQL,
-            ProgrammingTags.ChakraUI,
-            ProgrammingTags.GraphQL
+            ProgrammingTags.Vite,
+            ProgrammingTags.GraphQL,
+            ProgrammingTags.Docker,
         ],
     },
     {
@@ -73,13 +70,13 @@ export const projects = [
         url: "https://github.com/Maddoxx88/ifsc-validator",
         role: "creator",
         description: "mobile app to validate ifsc codes using razorpay api",
-        tags: [ProgrammingTags.SvelteKit],
+        tags: [ProgrammingTags.Flutter, ProgrammingTags.Dart, ProgrammingTags.Android, ProgrammingTags.REST],
     },
     {
         name: "wishing well",
         url: "https://wishingwell-ai.vercel.app/",
         role: "co-creator and developer",
         description: "ai gift generator",
-        tags: [ProgrammingTags.NextJS, ProgrammingTags.TailwindCSS, ProgrammingTags.Vercel]
+        tags: [ProgrammingTags.NextJS, ProgrammingTags.TailwindCSS, ProgrammingTags.Vercel, ProgrammingTags.OpenAI]
     },
 ];
