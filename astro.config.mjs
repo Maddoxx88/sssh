@@ -3,6 +3,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 import react from '@astrojs/react';
 
+import partytown from '@astrojs/partytown';
+
 export default defineConfig({
   vite: {
     plugins: [tailwindcss({
@@ -20,5 +22,5 @@ export default defineConfig({
   },
 
   site: 'https://Maddoxx88.github.io',
-  integrations: [react()],
+  integrations: [react(), partytown()],
 })
