@@ -1,77 +1,72 @@
 ---
-import { MapPin, Building2 } from "lucide-react"
 import { Image } from 'astro:assets';
+import { ArrowUpRight, Building2, MapPin } from "lucide-react";
 import sunitHeaderOfficial from '../assets/sunit-official.png';
-import sunitHeaderOfficial2 from '../assets/profile-pic.png';
-import { ArrowUpRight } from "lucide-react"
 ---
 
-<div class="mb-16 space-y-4">
+<div class="mb-16 space-y-6">
   <!-- Profile Avatar -->
-   
   <div class="hidden lg:flex space-x-12 align-middle items-center">
-    <!-- <Image src={sunitHeaderOfficial2} alt="Sunit Shirke" class="w-36 h-36 rounded-full p-1 shadow-lg bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045]" /> -->
-    <Image src={sunitHeaderOfficial} alt="Sunit Shirke" class="w-38 h-38 rounded-full shadow-lg" />
+    <Image src={sunitHeaderOfficial} alt="Sunit Shirke" class="w-40 h-40 rounded-full shadow-lg" />
     <div>
-      <h1 class="lg:text-6xl text-4xl font-bold mb-8 animate-fade-in ">
+      <h1 class="text-5xl lg:text-7xl 2xl:text-8xl font-bold mb-10 animate-fade-in">
         <span class="inline-block bg-black text-transparent bg-clip-text tracking-tight bg-[radial-gradient(100%_100%_at_top_left,gray,gray,rgb(74,32,138,0.75))]">
-          <span class="font-inter font-bold text-secondary ">sunit shirke</span>
+          <span class="font-inter font-bold text-secondary">sunit shirke</span>
         </span>
       </h1>
-      
-      <div class="flex flex-col my-4 gap-2 text-gray-400 font-inter">
+
+      <div class="flex flex-col gap-3 text-gray-400 text-lg lg:text-xl 2xl:text-2xl font-inter">
         <div class="flex items-center gap-2">
-          <MapPin className="w-4 h-4" />
+          <MapPin className="w-5 h-5" />
           newark, nj
         </div>
         <div class="flex items-center gap-2">
-          <Building2 className="w-4 h-4" />
+          <Building2 className="w-5 h-5" />
           grad researcher @NJIT
         </div>
       </div>
     </div>
   </div>
 
-
-  <h1 class="lg:text-4xl text-2xl font-bold my-8 animate-fade-in">
+  <h1 class="text-3xl lg:text-5xl 2xl:text-6xl font-bold my-10 animate-fade-in">
     <span class="inline-block group">
       <span class="font-inter font-bold text-secondary">
-        I make <span class="inline-flex relative text-green-600 before:absolute before:inset-0 before:bg-green-200 dark:before:bg-green-500 before:opacity-10 before:-z-10 before:-rotate-1 before:translate-y-1/4">full-stack</span> products that
+        I make <span class="inline-flex relative text-green-600 before:absolute before:inset-0 before:bg-green-200 dark:before:bg-green-500 before:opacity-10 before:-z-10 before:-rotate-1 before:translate-y-1">full-stack</span> products that
         <div class="relative">
           <span class="transition duration-300">people <span class="text-pink-400">love.</span></span>
-          <span class="opacity-0 group-hover:opacity-100 absolute bottom-0 z-10 transition duration-300"> (mostly me)</span>
+          <span class="opacity-0 group-hover:opacity-100 absolute bottom-0 z-10 transition duration-300">(mostly me)</span>
         </div>
       </span>
     </span>
   </h1>
 
-  <p class="leading-relaxed animate-fade-in-up lg:text-md text-sm font-inter">
+  <p class="leading-relaxed animate-fade-in-up text-base lg:text-xl 2xl:text-2xl font-inter">
     Most fun developer ever (seriously). I enjoy ux design, operating systems and contributing to OSS. CS Grad Student @NJIT. I’m also a Project Supervisor @GDG.
   </p>
-  <p class="leading-relaxed animate-fade-in-up lg:text-md text-sm font-inter">
+  <p class="leading-relaxed animate-fade-in-up text-base lg:text-xl 2xl:text-2xl font-inter">
     Blogging used to be a big part of my life, but has lately taken a back seat as a past time hobby. Interested in learning more about my
     <a class="inline-flex items-center gap-1 mt-0 text-accent underline group" href="https://medium.com/design-bootcamp/heres-why-design-tools-don-t-matter-df7c20f55e96" target="_blank">published work</a>?
   </p>
 
-  <p class="leading-relaxed animate-fade-in-up lg:text-md text-sm font-inter">
+  <p class="leading-relaxed animate-fade-in-up text-base lg:text-xl 2xl:text-2xl font-inter">
     Reach out to me 
-      <a class="inline-flex items-center gap-1 mt-0 text-blue-500 underline group" href="mailto:ss4945@njit.edu">ss4945@njit.edu <ArrowUpRight className="w-5 h-5 text-blue-500 transition-colors" /></a>
-    </p>
-  
-  <div class="flex items-center gap-4 mt-8 animate-fade-in-up font-inter font-bold">
+    <a class="inline-flex items-center gap-1 mt-0 text-blue-500 underline group" href="mailto:ss4945@njit.edu">ss4945@njit.edu <ArrowUpRight className="w-5 h-5 text-blue-500 transition-colors" /></a>
+  </p>
 
-    <div class="group text-black lg:text-lg text-sm">
-      <a class="inline-flex items-center gap-1 mt-0 group-hover:text-blue-500" href="https://github.com/Maddoxx88">GitHub <ArrowUpRight className="w-5 h-5  transition-colors" /></a>
+  <div class="flex items-center gap-6 mt-10 animate-fade-in-up font-inter font-bold">
+    <div class="group text-black text-base lg:text-lg 2xl:text-xl">
+      <a class="inline-flex items-center gap-1 group-hover:text-blue-500" href="https://github.com/Maddoxx88">GitHub <ArrowUpRight className="w-5 h-5 transition-colors" /></a>
     </div>
-    <div class="group text-black lg:text-lg text-sm">
-      <a class="inline-flex items-center gap-1 mt-0 group-hover:text-blue-500" href="https://linkedin.com/in/sunitshirke">Linkedin <ArrowUpRight className="w-5 h-5  transition-colors" /></a>
+    <div class="group text-black text-base lg:text-lg 2xl:text-xl">
+      <a class="inline-flex items-center gap-1 group-hover:text-blue-500" href="https://linkedin.com/in/sunitshirke">Linkedin <ArrowUpRight className="w-5 h-5 transition-colors" /></a>
     </div>
-    <div class="group text-black lg:text-lg text-sm">
-      <a class="inline-flex items-center gap-1 mt-0 group-hover:text-blue-500" href="https://x.com/sunitshirke">Twitter <ArrowUpRight className="w-5 h-5  transition-colors" /></a>
+    <div class="group text-black text-base lg:text-lg 2xl:text-xl">
+      <a class="inline-flex items-center gap-1 group-hover:text-blue-500" href="https://x.com/sunitshirke">Twitter <ArrowUpRight className="w-5 h-5 transition-colors" /></a>
     </div>
-    <div class="group text-black lg:text-lg text-sm">
-      <a class="inline-flex items-center gap-1 mt-0 group-hover:text-blue-500" href="mailto:ss4945@njit.edu">Email <ArrowUpRight className="w-5 h-5  transition-colors" /></a>
+    <div class="group text-black text-base lg:text-lg 2xl:text-xl">
+      <a class="inline-flex items-center gap-1 group-hover:text-blue-500" href="mailto:ss4945@njit.edu">Email <ArrowUpRight className="w-5 h-5 transition-colors" /></a>
     </div>
   </div>
 </div>
+
 
