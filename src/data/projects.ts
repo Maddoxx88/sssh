@@ -2,6 +2,15 @@ import { ProgrammingTags } from '../types/enums';
 
 export const projects = [
     {
+        name: "garnet",
+        url: "https://github.com/Maddoxx88/garnet",
+        role: "co-creator and maintainer",
+        description: "a truly open source key-value store built in golang. redis compatible, highly available, and super fast drop-in replacement of redis.",
+        tags: [
+            ProgrammingTags.Go,
+        ],
+    },
+    {
         name: "microregex",
         url: "https://microregex.netlify.app/",
         role: "co-creator and maintainer",
