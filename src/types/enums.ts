@@ -82,4 +82,5 @@ export enum ProgrammingTags {
     DarkMode = "darkmode",
     ChakraUI = "chakra-ui",
     ML = "machine learning",
+    Go = "golang",
 }
