@@ -2,6 +2,16 @@ import { ProgrammingTags } from '../types/enums';
 
 export const projects = [
     {
+        name: "zutchi",
+        url: "https://zutchi.com",
+        role: "co-creator and maintainer",
+        description: "zutchi is a web3-native tamagotchi reimagined for today’s users — fun, social, and useful. players adopt a digital cat nft whose well-being depends on four simple needs: food, sleep, work, and social-fun.",
+        tags: [
+            ProgrammingTags.TypeScript,
+            ProgrammingTags.Solidity,
+        ],
+    },
+    {
         name: "garnet",
         url: "https://github.com/Maddoxx88/garnet",
         role: "co-creator and maintainer",

@@ -83,4 +83,5 @@ export enum ProgrammingTags {
     ChakraUI = "chakra-ui",
     ML = "machine learning",
     Go = "golang",
+    Solidity = "solidity",
 }
