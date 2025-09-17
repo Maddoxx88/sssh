@@ -9,6 +9,7 @@ export const projects = [
         tags: [
             ProgrammingTags.TypeScript,
             ProgrammingTags.Solidity,
+            'Hardhat'
         ],
     },
     {
