@@ -1,94 +1,191 @@
+
 ---
+import sunitHeaderOfficial from '../assets/sunit-official.png';
 const hackathonImages = [
   {
-    src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+    src: sunitHeaderOfficial.src,
     alt: "Developers collaborating at a hackathon",
     className: "md:row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80",
+    src: sunitHeaderOfficial.src,
     alt: "Team photo after shipping a project",
     className: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
+    src: sunitHeaderOfficial.src,
     alt: "Brainstorming ideas on a whiteboard",
     className: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80",
+    src: sunitHeaderOfficial.src,
     alt: "Hackathon participants coding late at night",
     className: "md:row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80",
+    src: sunitHeaderOfficial.src,
     alt: "Close-up of code on a laptop",
     className: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=900&q=80",
+    src: sunitHeaderOfficial.src,
     alt: "Developers presenting their demo",
     className: "",
   },
 ];
+
+const hackathons = [
+  {
+    name: "Code Kshetra 2.0", 
+    date: "February 2025",
+    status: "Finalist",
+    logo: sunitHeaderOfficial.src,
+    alt: "Code Kshetra",
+  },
+  {
+    name: "Level Supermind Hackathon",
+    date: "January 2025",
+    status: "Finalist",
+    logo: sunitHeaderOfficial.src,
+    alt: "Level Supermind",
+  },
+  {
+    name: "DTU Brainwave Hackathon",
+    date: "September 2024",
+    status: "Finalist",
+    logo: sunitHeaderOfficial.src,
+    alt: "DTU Brainwave",
+  },
+];
 ---
 
-<section class="pt-10 pb-24">
-  <header class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-    <p class="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-3 font-mono">
-      HACK NIGHTS & CODE SPRINTS
-    </p>
+<section class="pt-10 pb-24 overflow-visible">
+  <header class="text-center max-w-2xl mx-auto mb-12 md:mb-16 overflow-visible">
     <h1
-      class="text-4xl sm:text-5xl md:text-6xl font-semibold font-inter tracking-tight text-zinc-900 dark:text-zinc-50"
+      class="text-4xl sm:text-5xl md:text-6xl font-semibold font-inter tracking-tight text-zinc-900"
     >
       Hackathons
     </h1>
     <p
-      class="mt-4 text-sm sm:text-base text-zinc-500 dark:text-zinc-400 leading-relaxed font-inter"
+      class="mt-4 text-sm sm:text-base text-zinc-500 dark:text-zinc-400 leading-relaxed font-inter overflow-visible flex flex-wrap items-center justify-center gap-2"
     >
       I&apos;ve been a part of
-      <span class="font-semibold text-zinc-900 dark:text-zinc-50">
-        3 hackathons
-      </span>
+      <button
+  onclick="document.getElementById('hackathonModal').showModal()"
+  class="font-semibold text-zinc-600 underline decoration-dotted cursor-pointer"
+>
+  3 hackathons
+</button>
+
+      <!-- <span class="font-semibold text-zinc-600">3 hackathons</span> -->
       – building fast, sleeping less, and shipping things I&apos;m proud of.
     </p>
   </header>
 
-  <div class="relative">
-    <!-- Soft glow / reflection at the bottom of the grid -->
-    <div
-      class="pointer-events-none absolute inset-x-12 bottom-[-80px] h-40 rounded-[80px] bg-gradient-to-t from-black/15 via-black/5 to-transparent blur-3xl"
-    ></div>
-
-    <div
-      class="relative grid grid-cols-2 md:grid-cols-3 auto-rows-[180px] sm:auto-rows-[220px] gap-4 sm:gap-6 md:gap-7"
-    >
-      {
-        hackathonImages.map((image) => (
-          <figure
-            class={`group relative overflow-hidden rounded-3xl bg-white/90 dark:bg-zinc-900/80 shadow-xl shadow-black/10 ring-1 ring-black/5 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl ${image.className}`}
-          >
-            <div class="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-black/20 pointer-events-none"></div>
-            <img
-              src={image.src}
-              alt={image.alt}
-              loading="lazy"
-              class="h-full w-full object-cover scale-[1.03] transition-transform duration-500 group-hover:scale-110"
-            />
-          </figure>
-        ))
-      }
+  <div class="relative -mx-6 lg:-mx-12 h-[420px] sm:h-[500px] overflow-hidden hackathons-mask">
+    <div class="hackathons-scroll grid grid-cols-3 gap-4 sm:gap-6 py-4 px-2">
+      {[...hackathonImages, ...hackathonImages].map((image) => (
+        <figure
+          class="group relative overflow-hidden rounded-3xl bg-white/90 dark:bg-zinc-900/80 shadow-xl shadow-black/10 ring-1 ring-black/5 w-full h-[200px] sm:h-[240px]"
+        >
+          <div class="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-black/20 pointer-events-none z-[1]"></div>
+          <img
+            src={image.src}
+            alt={image.alt}
+            loading="lazy"
+            class="h-full w-full object-cover scale-[1.03] transition-transform duration-500 group-hover:scale-110"
+          />
+        </figure>
+      ))}
     </div>
   </div>
 
-  <p
-    class="mt-10 text-xs sm:text-sm text-center text-zinc-500 dark:text-zinc-400 font-mono"
-  >
-    Swap these photos with your own hackathon memories by editing
-    <code class="px-1 py-0.5 rounded bg-zinc-900/5 dark:bg-zinc-100/5 text-[0.7rem]">
-      Hackathons.astro
-    </code>
-    in the repo.
-  </p>
+  <dialog
+  id="hackathonModal"
+  class="fixed inset-0 m-auto w-[90%] max-w-md rounded-3xl p-0 border-0"
+>
+  <div class="bg-zinc-50 text-zinc-900 p-6 rounded-3xl shadow-2xl">
+
+    <div class="flex justify-end items-center mb-4">
+
+      <button
+        onclick="document.getElementById('hackathonModal').close()"
+        class="text-zinc-500 hover:text-zinc-900 text-xl"
+      >
+        ✕
+      </button>
+    </div>
+
+    <ul class="space-y-3">
+      {hackathons.map((h) => (
+        <li class="flex justify-between text-sm border-b border-zinc-200 pb-2">
+          <span class="font-medium text-zinc-900">
+            {h.name}
+          </span>
+          <span class="text-zinc-600">
+            {h.status}
+          </span>
+        </li>
+      ))}
+    </ul>
+
+  </div>
+</dialog>
+
+
+
 </section>
+
+<style>
+    dialog {
+      position: fixed;
+    }
+
+    dialog::backdrop {
+     background: rgba(0, 0, 0, 0.35);
+     backdrop-filter: blur(6px);
+    }
+
+
+  .hackathons-mask {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 12%,
+      black 88%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 12%,
+      black 88%,
+      transparent 100%
+    );
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+
+  .hackathons-scroll {
+    animation: hackathons-scroll-up 25s linear infinite;
+  }
+
+  .hackathons-scroll:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes hackathons-scroll-up {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+</style>
 
