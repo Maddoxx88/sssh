@@ -12,6 +12,10 @@ import sunitHeaderOfficial from '../assets/sunit-official.png';
       href="/"><span class="relative text-white dark:text-gray-950">[h] home</span></a
     >
     <a
+      class={`text-lg hover:text-accent transition-colors duration-200 relative inline-block ${Astro.url.pathname.startsWith("/hackathons") ? `font-bold bg-amber-300 before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-amber-300` : ``}`}
+      href="/hackathons"><span class="relative text-white dark:text-gray-950">[k] hackathons</span></a
+    >
+    <a
       class={`text-lg hover:text-accent transition-colors duration-200 relative inline-block ${Astro.url.pathname.startsWith("/work") ? `font-bold bg-amber-300 before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-amber-300` : ``}`}
       href="/work"><span class="relative text-white dark:text-gray-950">[w] work</span></a
     >
@@ -54,6 +58,10 @@ import sunitHeaderOfficial from '../assets/sunit-official.png';
     <a
       class={`block text-lg hover:text-accent transition-colors duration-200 p-2 ${Astro.url.pathname.startsWith("/work") ? `font-bold bg-amber-300` : ``}`}
       href="/work">[w] work</a
+    >
+    <a
+      class={`block text-lg hover:text-accent transition-colors duration-200 p-2 ${Astro.url.pathname.startsWith("/hackathons") ? `font-bold bg-amber-300` : ``}`}
+      href="/hackathons">[k] hackathons</a
     >
     <a
       class={`block text-lg hover:text-accent transition-colors duration-200 p-2 ${Astro.url.pathname.startsWith("/blog") ? `font-bold bg-amber-300` : ``}`}
