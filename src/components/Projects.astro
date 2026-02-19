@@ -1,5 +1,5 @@
 ---
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, LayoutGrid, LayoutList } from "lucide-react";
 
 import { projects } from "../data/projects";
 ---
@@ -8,26 +8,56 @@ import { projects } from "../data/projects";
   <h1 class="text-2xl font-bold mb-8 font-inter">
     <span class="mr-2">|</span><span class="">projects</span>
   </h1>
-  <p class="text-gray-400 mb-12 leading-relaxed">
+  <p class="text-gray-400 mb-8 leading-relaxed">
     Here are some of the projects i've worked on. I love building tools and
     exploring new technologies along the way.
   </p>
 
+  <div class="flex items-center gap-2 mb-10 font-inter">
+    <span class="text-sm text-gray-400">view:</span>
+    <div
+      id="view-selector"
+      class="inline-flex rounded-lg border border-gray-600  p-1"
+      role="tablist"
+      aria-label="Project view"
+    >
+      <button
+        type="button"
+        data-view="cards"
+        class="view-option inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium text-gray-400 transition-colors hover:text-gray-200 aria-selected:text-white aria-selected:bg-gray-600"
+        aria-selected="true"
+      >
+        <LayoutList className="w-4 h-4" aria-hidden />
+      </button>
+      <button
+        type="button"
+        data-view="grid"
+        class="view-option inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium text-gray-400 transition-colors hover:text-gray-200 aria-selected:text-white aria-selected:bg-gray-600"
+        aria-selected="false"
+      >
+        <LayoutGrid className="w-4 h-4" aria-hidden />
+      </button>
+    </div>
+  </div>
 
-  <div class="space-y-12 font-inter">
+  <div
+    id="projects-container"
+    data-view="cards"
+    class="projects-container font-inter"
+  >
     {
       projects.map((project) => {
         return (
-          <div class="group border-1 border-gray-200 shadow p-6 hover:border-1 transition-colors hover:shadow-xl">
+          <div class="project-card group border border-gray-200 shadow p-6 hover:border-gray-300 transition-colors hover:shadow-xl">
             <>
               <a target="_blank" href={project.url}>
                 <div class="flex justify-between items-start mb-4">
-                  <h2 class="text-2xl font-bold ">{project.name}</h2>
-                  <ArrowUpRight className="w-6 h-6 text-gray-400 " />
+                  <h2 class="text-2xl font-bold">{project.name}</h2>
+                  <ArrowUpRight className="w-6 h-6 text-gray-400 shrink-0" />
                 </div>
               </a>
               <p class="text-sm text-gray-300 mb-4">{project.role}</p>
-              <p class="text-gray-400 mb-6">{project.description}</p>
+              <p class="project-description text-gray-400 mb-6">{project.description}</p>
             </>
             <div class="space-y-6">
               <div>
@@ -51,3 +81,74 @@ import { projects } from "../data/projects";
     }
   </div>
 </main>
+
+<style>
+  .projects-container[data-view="cards"] {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .projects-container[data-view="grid"] {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .projects-container[data-view="grid"] {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .projects-container[data-view="grid"] {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .projects-container[data-view="grid"] .project-card .project-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .projects-container[data-view="grid"] .project-card h2 {
+    font-size: 1.25rem;
+  }
+</style>
+
+<script>
+  const container = document.getElementById("projects-container");
+  const selector = document.getElementById("view-selector");
+  const options = selector?.querySelectorAll(".view-option");
+
+  const VIEW_KEY = "projects-view";
+
+  function setView(view: "cards" | "grid") {
+    if (!container || !options) return;
+    container.setAttribute("data-view", view);
+    options.forEach((btn) => {
+      const isSelected = btn.getAttribute("data-view") === view;
+      btn.setAttribute("aria-selected", String(isSelected));
+      btn.classList.toggle("text-gray-400", !isSelected && view !== "grid");
+      btn.classList.toggle("text-gray-200", !isSelected && view === "grid");
+    });
+    try {
+      localStorage.setItem(VIEW_KEY, view);
+    } catch (_) {}
+  }
+
+  const saved = typeof localStorage !== "undefined" ? localStorage.getItem(VIEW_KEY) : null;
+  if (saved === "grid" || saved === "cards") {
+    setView(saved);
+  }
+
+  options?.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const view = btn.getAttribute("data-view") as "cards" | "grid";
+      if (view) setView(view);
+    });
+  });
+</script>
