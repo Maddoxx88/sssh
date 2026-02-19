@@ -77,10 +77,10 @@ const hackathons = [
 ];
 --- 
 
-<section class="pt-10 pb-24 overflow-visible">
+<section class="pb-24 overflow-visible">
   <header class="text-center max-w-2xl mx-auto mb-12 md:mb-16 overflow-visible">
     <h1
-      class="text-4xl sm:text-5xl md:text-6xl font-semibold font-inter tracking-tight text-zinc-900"
+      class="text-4xl sm:text-5xl md:text-6xl font-semibold font-inter tracking-tight"
     >
       Hackathons
     </h1>
@@ -90,7 +90,7 @@ const hackathons = [
       I&apos;ve been a part of
       <button
   onclick="document.getElementById('hackathonModal').showModal()"
-  class="font-semibold text-zinc-600 underline decoration-dotted cursor-pointer"
+  class="font-semibold text-zinc-600 underline decoration-dotted cursor-pointer italic"
 >
   3 hackathons
 </button>
@@ -121,14 +121,14 @@ const hackathons = [
   <dialog
   id="hackathonModal"
   class="fixed inset-0 m-auto w-[90%] max-w-md rounded-3xl p-0 border-0"
-> ``
+> 
   <div class="bg-zinc-50 text-zinc-900 p-6 rounded-3xl shadow-2xl">
 
     <div class="flex justify-end items-center mb-4">
 
       <button
         onclick="document.getElementById('hackathonModal').close()"
-        class="text-zinc-500 hover:text-zinc-900 text-xl"
+        class="text-zinc-500 hover:text-zinc-900 text-2xl"
       >
         ✕
       </button>
@@ -140,10 +140,10 @@ const hackathons = [
           <span class="font-medium text-zinc-900">
             <img src={h.logo} alt={h.alt} class="w-10 h-10" />
           </span>
-          <span class="font-medium text-zinc-900">
+          <span class="font-medium font-mono text-zinc-900">
             {h.name}
           </span>
-          <span class="text-zinc-600">
+          <span class=`${h.status == "Winner" ? "text-green-500 font-medium" : "text-zinc-600"}`>
             {h.status}
           </span>
         </li>
