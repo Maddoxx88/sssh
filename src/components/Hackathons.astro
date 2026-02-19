@@ -1,34 +1,52 @@
 
 ---
 import sunitHeaderOfficial from '../assets/sunit-official.png';
+import EthGlobalNYC1 from '../assets/ethglobalnyc-1.jpg';
+import EthGlobalNYC2 from '../assets/ethglobalnyc-2.jpg';
+import EthGlobalNYC3 from '../assets/ethglobalnyc-3.jpg';
+import EthGlobalNYC4 from '../assets/ethglobalnyc-4.jpg';
+import EthGlobalNYC5 from '../assets/ethglobalnyc-5.jpg';
+import EthGlobalNYC6 from '../assets/ethglobalnyc-6.jpg';
+import EthGlobalNYC7 from '../assets/ethglobalnyc-7.jpg';
+import EthGlobalNYC8 from '../assets/ethglobalnyc-8.jpg';
+import EthGlobalNYC9 from '../assets/ethglobalnyc-9.jpg';
+import GirlHacks23 from '../assets/girlhacks23.jpg';
+import MlhAiNYC from '../assets/mlhainyc-1.jpg';
+import MlhAiNYC2 from '../assets/mlhainyc-2.jpg';
+import MlhAiNYC3 from '../assets/mlhainyc-3.jpg';
+
+import GirlHacks23Logo from '../assets/logos/girlhacks23.png';
+import MlhAiNYCLogo from '../assets/logos/mlhainyc.jpg';
+import EthGlobalNYCLogo from '../assets/logos/ethglobalnyc.svg';
+
 const hackathonImages = [
   {
-    src: sunitHeaderOfficial.src,
+    src: EthGlobalNYC1.src,
     alt: "Developers collaborating at a hackathon",
     className: "md:row-span-2",
   },
   {
-    src: sunitHeaderOfficial.src,
+    src: EthGlobalNYC2.src,
     alt: "Team photo after shipping a project",
     className: "",
   },
   {
-    src: sunitHeaderOfficial.src,
+    src: EthGlobalNYC3.src,
     alt: "Brainstorming ideas on a whiteboard",
     className: "",
   },
   {
-    src: sunitHeaderOfficial.src,
+    src: EthGlobalNYC4.src,
     alt: "Hackathon participants coding late at night",
     className: "md:row-span-2",
   },
   {
-    src: sunitHeaderOfficial.src,
+    src: GirlHacks23.src,
     alt: "Close-up of code on a laptop",
     className: "",
   },
   {
-    src: sunitHeaderOfficial.src,
+    src: MlhAiNYC.src,
     alt: "Developers presenting their demo",
     className: "",
   },
@@ -36,28 +54,28 @@ const hackathonImages = [
 
 const hackathons = [
   {
-    name: "Code Kshetra 2.0", 
-    date: "February 2025",
-    status: "Finalist",
-    logo: sunitHeaderOfficial.src,
-    alt: "Code Kshetra",
+    name: "EthGlobal NYC", 
+    date: "Aug 2025",
+    status: "Winner",
+    logo: EthGlobalNYCLogo.src,
+    alt: "EthGlobal NYC",
   },
   {
-    name: "Level Supermind Hackathon",
-    date: "January 2025",
+    name: "MLH AI NYC",
+    date: "June 2025",
     status: "Finalist",
-    logo: sunitHeaderOfficial.src,
-    alt: "Level Supermind",
+    logo: MlhAiNYCLogo.src,
+    alt: "MLH AI NYC",
   },
   {
-    name: "DTU Brainwave Hackathon",
-    date: "September 2024",
-    status: "Finalist",
-    logo: sunitHeaderOfficial.src,
-    alt: "DTU Brainwave",
+    name: "GirlHacks 2023",
+    date: "September 2023",
+    status: "Winner",
+    logo: GirlHacks23Logo.src,
+    alt: "GirlHacks 2023",
   },
 ];
----
+--- 
 
 <section class="pt-10 pb-24 overflow-visible">
   <header class="text-center max-w-2xl mx-auto mb-12 md:mb-16 overflow-visible">
@@ -119,6 +137,9 @@ const hackathons = [
     <ul class="space-y-3">
       {hackathons.map((h) => (
         <li class="flex justify-between text-sm border-b border-zinc-200 pb-2">
+          <span class="font-medium text-zinc-900">
+            <img src={h.logo} alt={h.alt} class="w-10 h-10" />
+          </span>
           <span class="font-medium text-zinc-900">
             {h.name}
           </span>
