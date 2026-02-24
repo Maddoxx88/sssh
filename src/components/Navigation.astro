@@ -2,25 +2,32 @@
 import { Menu, X } from "lucide-react";
 import { Image } from 'astro:assets';
 import sunitHeaderOfficial from '../assets/sunit-official.png';
+const { textColor, accentColor } = Astro.props;
+const hasCustom = textColor && accentColor;
 ---
 
 <nav class="relative flex items-center justify-between mb-14 text-sm">
   <!-- Desktop Navigation Links (hidden on mobile) -->
   <div class="hidden lg:flex items-center gap-1 font-mono">
     <a
-      class={`px-4 py-2 rounded-full text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname === "/" ? "bg-[#FF4A00] text-white font-semibold" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+      class={`px-4 py-2 rounded-full text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname === "/" ? (hasCustom ? "font-semibold" : "bg-[#FF4A00] text-white font-semibold") : (hasCustom ? "opacity-70 hover:opacity-100" : "text-white/80 hover:text-white hover:bg-white/10")}`}
+      style={hasCustom && Astro.url.pathname === "/" ? `background: ${accentColor}; color: #F2BC94;` : undefined}
       href="/">[h] home</a>
     <a
-      class={`px-4 py-2 rounded-full text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/hackathons") ? "bg-[#FF4A00] text-white font-semibold" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+      class={`px-4 py-2 rounded-full text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/hackathons") ? (hasCustom ? "font-semibold" : "bg-[#FF4A00] text-white font-semibold") : (hasCustom ? "opacity-70 hover:opacity-100" : "text-white/80 hover:text-white hover:bg-white/10")}`}
+      style={hasCustom && Astro.url.pathname.startsWith("/hackathons") ? `background: ${accentColor}; color: #F2BC94;` : undefined}
       href="/hackathons">[k] hackathons</a>
     <a
-      class={`px-4 py-2 rounded-full text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/work") ? "bg-[#FF4A00] text-white font-semibold" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+      class={`px-4 py-2 rounded-full text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/work") ? (hasCustom ? "font-semibold" : "bg-[#FF4A00] text-white font-semibold") : (hasCustom ? "opacity-70 hover:opacity-100" : "text-white/80 hover:text-white hover:bg-white/10")}`}
+      style={hasCustom && Astro.url.pathname.startsWith("/work") ? `background: ${accentColor}; color: #F2BC94;` : undefined}
       href="/work">[w] work</a>
     <a
-      class={`px-4 py-2 rounded-full text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/blog") ? "bg-[#FF4A00] text-white font-semibold" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+      class={`px-4 py-2 rounded-full text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/blog") ? (hasCustom ? "font-semibold" : "bg-[#FF4A00] text-white font-semibold") : (hasCustom ? "opacity-70 hover:opacity-100" : "text-white/80 hover:text-white hover:bg-white/10")}`}
+      style={hasCustom && Astro.url.pathname.startsWith("/blog") ? `background: ${accentColor}; color: #F2BC94;` : undefined}
       href="/blog">[b] blog</a>
     <a
-      class={`px-4 py-2 rounded-full text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/projects") ? "bg-[#FF4A00] text-white font-semibold" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+      class={`px-4 py-2 rounded-full text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/projects") ? (hasCustom ? "font-semibold" : "bg-[#FF4A00] text-white font-semibold") : (hasCustom ? "opacity-70 hover:opacity-100" : "text-white/80 hover:text-white hover:bg-white/10")}`}
+      style={hasCustom && Astro.url.pathname.startsWith("/projects") ? `background: ${accentColor}; color: #F2BC94;` : undefined}
       href="/projects">[p] projects</a>
   </div>
 
@@ -41,13 +48,14 @@ import sunitHeaderOfficial from '../assets/sunit-official.png';
   <!-- Mobile Menu Links (hidden by default) -->
   <div
     id="mobileMenu"
-    class="lg:hidden hidden absolute top-full left-0 right-0 mt-2 rounded-2xl bg-[#252525] border border-white/10 text-white shadow-xl shadow-black/20 z-10 font-mono overflow-hidden"
+    class={`lg:hidden hidden absolute top-full left-0 right-0 mt-2 rounded-2xl shadow-xl z-10 font-mono overflow-hidden ${hasCustom ? 'border border-[#722620]/20' : 'bg-[#252525] border border-white/10 text-white shadow-black/20'}`}
+    style={hasCustom ? `background: #F2BC94; color: ${textColor};` : undefined}
   >
-    <a class={`block px-5 py-3.5 text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname === "/" ? "bg-[#FF4A00]/20 text-white font-semibold" : "hover:bg-white/5"}`} href="/">[h] home</a>
-    <a class={`block px-5 py-3.5 text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/work") ? "bg-[#FF4A00]/20 text-white font-semibold" : "hover:bg-white/5"}`} href="/work">[w] work</a>
-    <a class={`block px-5 py-3.5 text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/hackathons") ? "bg-[#FF4A00]/20 text-white font-semibold" : "hover:bg-white/5"}`} href="/hackathons">[k] hackathons</a>
-    <a class={`block px-5 py-3.5 text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/blog") ? "bg-[#FF4A00]/20 text-white font-semibold" : "hover:bg-white/5"}`} href="/blog">[b] blog</a>
-    <a class={`block px-5 py-3.5 text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/projects") ? "bg-[#FF4A00]/20 text-white font-semibold" : "hover:bg-white/5"}`} href="/projects">[p] projects</a>
+    <a class={`block px-5 py-3.5 text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname === "/" ? (hasCustom ? "font-semibold opacity-100" : "bg-[#FF4A00]/20 text-white font-semibold") : (hasCustom ? "opacity-70 hover:opacity-100" : "hover:bg-white/5")}`} style={hasCustom && Astro.url.pathname === "/" ? `background: ${accentColor}20;` : undefined} href="/">[h] home</a>
+    <a class={`block px-5 py-3.5 text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/work") ? (hasCustom ? "font-semibold opacity-100" : "bg-[#FF4A00]/20 text-white font-semibold") : (hasCustom ? "opacity-70 hover:opacity-100" : "hover:bg-white/5")}`} style={hasCustom && Astro.url.pathname.startsWith("/work") ? `background: ${accentColor}20;` : undefined} href="/work">[w] work</a>
+    <a class={`block px-5 py-3.5 text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/hackathons") ? (hasCustom ? "font-semibold opacity-100" : "bg-[#FF4A00]/20 text-white font-semibold") : (hasCustom ? "opacity-70 hover:opacity-100" : "hover:bg-white/5")}`} style={hasCustom && Astro.url.pathname.startsWith("/hackathons") ? `background: ${accentColor}20;` : undefined} href="/hackathons">[k] hackathons</a>
+    <a class={`block px-5 py-3.5 text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/blog") ? (hasCustom ? "font-semibold opacity-100" : "bg-[#FF4A00]/20 text-white font-semibold") : (hasCustom ? "opacity-70 hover:opacity-100" : "hover:bg-white/5")}`} style={hasCustom && Astro.url.pathname.startsWith("/blog") ? `background: ${accentColor}20;` : undefined} href="/blog">[b] blog</a>
+    <a class={`block px-5 py-3.5 text-[15px] transition-all duration-300 ease-out ${Astro.url.pathname.startsWith("/projects") ? (hasCustom ? "font-semibold opacity-100" : "bg-[#FF4A00]/20 text-white font-semibold") : (hasCustom ? "opacity-70 hover:opacity-100" : "hover:bg-white/5")}`} style={hasCustom && Astro.url.pathname.startsWith("/projects") ? `background: ${accentColor}20;` : undefined} href="/projects">[p] projects</a>
   </div>
 </nav>
 
