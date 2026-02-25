@@ -1,8 +1,23 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
-const { title, bgColor, textColor } = Astro.props;
-const hasCustomTheme = bgColor && textColor;
+import { PAGE_THEMES, type PageThemeId } from "../lib/pageThemes";
+
+interface Props {
+  title?: string;
+  /** Use a predefined page theme (recommended). */
+  theme?: PageThemeId;
+  /** Legacy: custom bg/text when theme is not used. */
+  bgColor?: string;
+  textColor?: string;
+}
+
+const { title, theme: themeId, bgColor, textColor } = Astro.props as Props;
+const theme = themeId ? PAGE_THEMES[themeId] : (bgColor && textColor ? { bg: bgColor, text: textColor, navPillText: textColor } : null);
+const hasCustomTheme = !!theme;
+const bg = theme?.bg;
+const text = theme?.text;
+const navPillText = theme?.navPillText ?? text;
 ---
 
 <!doctype html>
@@ -52,9 +67,14 @@ const hasCustomTheme = bgColor && textColor;
       gtag("config", "G-6PBDJX00DY");
     </script>
   </head>
-  <body class={`min-h-screen relative ${hasCustomTheme ? 'custom-theme' : ''}`} style={hasCustomTheme ? `background: ${bgColor}; color: ${textColor};` : undefined}>
+  <body class={`min-h-screen relative ${hasCustomTheme ? 'custom-theme' : ''}`} style={hasCustomTheme ? `background: ${bg}; color: ${text};` : undefined}>
     <div class="relative z-10 max-w-3xl w-full mx-auto px-5 sm:px-8 lg:px-12 py-10 sm:py-14">
-      <Navigation textColor={hasCustomTheme ? textColor : undefined} accentColor={hasCustomTheme ? textColor : undefined} />
+      <Navigation
+        textColor={hasCustomTheme ? text : undefined}
+        accentColor={hasCustomTheme ? text : undefined}
+        navPillTextColor={hasCustomTheme ? navPillText : undefined}
+        dropdownBg={hasCustomTheme ? bg : undefined}
+      />
       <main class="mt-6">
         <slot />
       </main>
