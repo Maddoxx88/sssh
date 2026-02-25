@@ -49,8 +49,19 @@ body {
 }
 
 ::selection {
-  background: var(--accent);
-  color: white;
+  background: var(--selection-bg, var(--accent));
+  color: var(--selection-color, white);
+}
+
+::-moz-selection {
+  background: var(--selection-bg, var(--accent));
+  color: var(--selection-color, white);
+}
+
+body.custom-theme::selection,
+body.custom-theme::-moz-selection {
+  background: var(--selection-bg);
+  color: var(--selection-color);
 }
 
 a:focus-visible,

@@ -67,7 +67,10 @@ const navPillText = theme?.navPillText ?? text;
       gtag("config", "G-6PBDJX00DY");
     </script>
   </head>
-  <body class={`min-h-screen relative ${hasCustomTheme ? 'custom-theme' : ''}`} style={hasCustomTheme ? `background: ${bg}; color: ${text};` : undefined}>
+  <body
+    class={`min-h-screen relative ${hasCustomTheme ? "custom-theme" : ""}`}
+    style={hasCustomTheme ? `background: ${bg}; color: ${text}; --selection-bg: ${text}; --selection-color: ${bg};` : undefined}
+  >
     <div class="relative z-10 max-w-3xl w-full mx-auto px-5 sm:px-8 lg:px-12 py-10 sm:py-14">
       <Navigation
         textColor={hasCustomTheme ? text : undefined}
