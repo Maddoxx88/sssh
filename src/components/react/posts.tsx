@@ -144,47 +144,47 @@ export function Posts() {
 
   return (
     <main className="animate-fade-in-up relative">
-      <h1 className="text-2xl font-bold mb-8 font-inter">
+      <h1 className="text-2xl font-bold mb-8 font-inter text-current">
         <span className="mr-2">|</span>
-        <span className="">blog</span>
+        blog
       </h1>
-      <p className="hidden sm:block text-sm text-gray-400 mb-8 font-mono">
+      <p className="hidden sm:block text-sm text-current/70 mb-8 font-mono leading-8 tracking-wide">
         press{" "}
-        <kbd className="px-1 py-0.5 text-xs border border-gray-700 rounded">
+        <kbd className="px-1 py-0.5 text-xs border border-current/40 rounded">
           /
         </kbd>{" "}
         to search • use{" "}
-        <kbd className="px-1 py-0.5 text-xs border border-gray-700 rounded">
+        <kbd className="px-1 py-0.5 text-xs border border-current/40 rounded">
           ctrl / ⌘ j
         </kbd>{" "}
         and{" "}
-        <kbd className="px-1 py-0.5 text-xs border border-gray-700 rounded">
+        <kbd className="px-1 py-0.5 text-xs border border-current/40 rounded">
           ctrl / ⌘ k
         </kbd>{" "}
         or{" "}
-        <kbd className="px-1 py-0.5 text-xs border border-gray-700 rounded">
+        <kbd className="px-1 py-0.5 text-xs border border-current/40 rounded">
           ↑
         </kbd>
         and{" "}
-        <kbd className="px-1 py-0.5 text-xs border border-gray-700 rounded">
+        <kbd className="px-1 py-0.5 text-xs border border-current/40 rounded">
           ↓
         </kbd>{" "}
         to navigate
         • press{" "}
-        <kbd className="px-1 py-0.5 text-xs border border-gray-700 rounded">
+        <kbd className="px-1 py-0.5 text-xs border border-current/40 rounded">
           esc
         </kbd>{" "}
         to escape
       </p>
       {isSearching && (
-        <div className="fixed bottom-4 left-4 right-4 max-w-2xl mx-auto backdrop-blur-sm border border-gray-800 p-2">
-          <div className="flex items-center text-gray-400">
-            <span className="text-accent mr-2">/</span>
+        <div className="fixed bottom-4 left-4 right-4 max-w-2xl mx-auto backdrop-blur-sm border border-current/40 p-2">
+          <div className="flex items-center text-current/80">
+            <span className="text-current mr-2">/</span>
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 bg-transparent outline-none"
+              className="flex-1 bg-transparent outline-none text-current placeholder:opacity-60"
               autoFocus
               placeholder="search posts..."
               aria-label="Search posts"
@@ -193,7 +193,7 @@ export function Posts() {
               aria-controls="search-results"
               aria-activedescendant={
                 isSearching && filteredPosts.length > 0
-                  ? `post-${filteredPosts[selectedIndex].slug}`
+                  ? `post-${filteredPosts[selectedIndex].id}`
                   : undefined
               }
             />
@@ -205,6 +205,7 @@ export function Posts() {
         {filteredPosts.map((item, index) => (
           <div
             key={item.title}
+            id={`post-${item.id}`}
             ref={
               isSearching && index === selectedIndex ? selectedItemRef : null
             }

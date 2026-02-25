@@ -13,6 +13,11 @@ export const PAGE_THEMES = {
     text: "#FFFCDC",
     navPillText: "#14281D",
   },
+  blog: {
+    bg: "#F9858B",
+    text: "#761137",
+    navPillText: "#F9858B",
+  },
 } as const;
 
 export type PageThemeId = keyof typeof PAGE_THEMES;
