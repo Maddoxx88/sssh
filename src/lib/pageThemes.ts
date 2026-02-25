@@ -18,6 +18,11 @@ export const PAGE_THEMES = {
     text: "#761137",
     navPillText: "#F9858B",
   },
+  projects: {
+    bg: "#EFC9AF",
+    text: "#104C91",
+    navPillText: "#EFC9AF",
+  },
 } as const;
 
 export type PageThemeId = keyof typeof PAGE_THEMES;
