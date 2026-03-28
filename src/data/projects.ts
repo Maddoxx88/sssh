@@ -13,6 +13,39 @@ export const projects = [
         ],
     },
     {
+        name: "millet",
+        url: "https://github.com/Maddoxx88/millet",
+        role: "creator",
+        description: "semantic html, styled with zero classes required. one css file and an optional js module for progressive enhancement and accessibility-first ui patterns.",
+        tags: [
+            ProgrammingTags.JavaScript,
+            ProgrammingTags.Accessibility,
+            ProgrammingTags.DarkMode
+        ],
+    },
+    {
+        name: "skimmr",
+        url: "https://github.com/Maddoxx88/skimmr",
+        role: "creator",
+        description: "lightweight browser summarizer with lexrank extractive summaries by default and optional local ai mode with automatic fallback.",
+        tags: [
+            ProgrammingTags.JavaScript,
+            ProgrammingTags.NodeJS,
+            ProgrammingTags.Performance
+        ],
+    },
+    {
+        name: "voice insurance quoting agent (viqa)",
+        url: "https://github.com/Maddoxx88/viqa",
+        role: "creator",
+        description: "voice-enabled insurance quoting app with a react frontend and node.js backend for real-time quote generation.",
+        tags: [
+            ProgrammingTags.React,
+            ProgrammingTags.NodeJS,
+            ProgrammingTags.REST
+        ],
+    },
+    {
         name: "garnet",
         url: "https://github.com/Maddoxx88/garnet",
         role: "co-creator and maintainer",
